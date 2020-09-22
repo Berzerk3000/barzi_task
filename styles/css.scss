@@ -8,13 +8,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  background-image: url('/src/bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh; 
-}
-
 li a.current-link::before {
   content: '';
   position: absolute;
@@ -23,29 +16,30 @@ li a.current-link::before {
   border-right: 3vw solid transparent; 
   border-left: 3vw solid transparent;
   border-top: 3vw solid #ff3366;
-
-  
 }
 
-// box
-.box-content {
-  position: relative;
-  top: 100px;
-  min-width: 800px;
-  height: 80vh;
-  margin: 0 6vw;
-  background: #ff8484;
-  background: linear-gradient(90deg, #ff8484 -300%, #ffffff 80%);
-  box-shadow: rgba(255, 132, 132, 0.1) -60px 40px;
+body {
+  background-image: url('/src/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; 
+}
 
+// wrapper
+.wrapper {
+  position: relative;
+  top: 150px;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr 4fr;
+  margin: auto 8vw;
+  background: linear-gradient(90deg, #ff8484 -300%, #ffffff 80%);
+  box-shadow: rgba(255, 132, 132, 0.2) -60px 40px;  
   // left bar
   .left-bar {
+    grid-row: 1/ span 2;
     background: linear-gradient(to bottom, #ff3366 50%, #333 120%);
     width: 8vw;
-    height: 100%;
-    float: left;
-    margin-right: 4rem;
-
     // tiny logo
     .logo-dark {
       position: relative;
@@ -65,9 +59,8 @@ li a.current-link::before {
   }
 
   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
     .logo-light {
       display: flex;
       align-items: center;
@@ -96,10 +89,11 @@ li a.current-link::before {
     }
 
     .links {
+      align-self: center;
       list-style: none;
       display: flex;
       font-size: 1.5vw;
-      margin-right: 10vw;
+      margin-left: 10vw;
       li a {
         position: relative;
         margin-right: 4vw;
@@ -107,9 +101,14 @@ li a.current-link::before {
       }
     }
   }
+}
+
+// content
+.content {
 
   section.start {
     margin-top: 5vw;
+
     .title {
       color: #ff3366;
       font-size: 3vw;
@@ -121,22 +120,17 @@ li a.current-link::before {
       font-size: 1.5vw;
       width: 50%;
     }
-
     .button {
-      position: absolute;
-      right: 0;
-      bottom: 35%;
-      margin-right: 6vw;
-      font-size: 2vw;
       color: #fff;
       background: linear-gradient(140deg, #ff8484 5%, #ff3366 100%);
       box-shadow: rgba(255, 51, 102, 0.4) 10px 30px 60px 0px;
-      padding: 2vw 2vw;
       border-radius: 2rem;
-    }
-  }
+      padding: 1vw 2vw;
+      font-size: 2vw;
+      position: relative;
+      left: 60%;
+      margin: auto;
 
-  section.contact {
-    
+    }
   }
 }
