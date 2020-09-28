@@ -16,13 +16,18 @@ body {
 
 
 .wrapper {
-  padding: 10rem;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
 }
 
 .container {
-  min-height: 800px;
-  min-width: 600px;
+  height: 70vh;
+  width: 70vw;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 8fr;
@@ -47,17 +52,65 @@ body {
   margin: auto;
 }
 
+.ipm {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+.lightLogo {
+  position: absolute;
+  right: 2rem;
+  top:3rem;
+  z-index:10;
+
+}
+
 /* NAV-BAR */
 nav {
-  padding-left: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+.logo div {
+  font-size: 3rem;
+  display: inline-block;
+}
+.logo div:first-of-type{
+  color: #ff3366;
+}
+
+.logo div:last-of-type{
+  color: #fff;
+  background-color: #ff3366;
+  height: 100%;
+  display: grid;
+  align-items:center;
+  justify-content: center;
+  border-bottom-left-radius: 8px;
+  z-index:10;
+}
+
+.logo div:last-of-type:before {
+  content: '';
+  height: 100%;
+  width: 3rem;
+  border-bottom-right-radius: 8px;
+  position: absolute;
+  background-color: #ff3366;
+  right: 2rem;
+  z-index: 5;
+  
 }
 
 /* nav-logo */
 nav .logo {
-  font-size: 4rem;
+  /* font-size: 4rem; */
   text-transform: uppercase;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  grid-auto-flow: column;
 }
 
 nav .logo a {
@@ -85,10 +138,33 @@ nav .links li {
   display: inline;
   padding: 1rem;
 }
+.claim {
+  width: 100%;
+  margin: 2rem;
+
+}
+
+.subContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+
+}
+
+.kontakt {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Content */
 .content {
-  padding-left: 5rem;
+  /* padding-left: 5rem; */
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 /* content-start */
