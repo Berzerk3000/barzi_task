@@ -22,23 +22,22 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-
 }
 
 .container {
   height: 70vh;
-  width: 70vw;
+  width: 80vw;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 8fr;
-  grid-template-rows: 2fr 6fr;
+  grid-template-rows: 1fr 5fr;
   background: linear-gradient(to right, #ff8484 -300%, #ffffff 80%);
   box-shadow: rgba(255, 132, 132, 0.2) -60px 40px;  
 }
 
 /* LEFT BAR */
 .container .left-bar {
-  grid-row: 1/ span 2;
+  grid-row: 1 / span 2;
   background: linear-gradient(to bottom, #ff3366 50%, #333 120%);
 }
 .container .left-bar .logo-dark {position: relative; top: 3rem;}
@@ -52,65 +51,18 @@ body {
   margin: auto;
 }
 
-.ipm {
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
-}
-
-.lightLogo {
-  position: absolute;
-  right: 2rem;
-  top:3rem;
-  z-index:10;
-
-}
-
 /* NAV-BAR */
 nav {
+  margin-left: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-.logo div {
-  font-size: 3rem;
-  display: inline-block;
-}
-.logo div:first-of-type{
-  color: #ff3366;
-}
-
-.logo div:last-of-type{
-  color: #fff;
-  background-color: #ff3366;
-  height: 100%;
-  display: grid;
-  align-items:center;
-  justify-content: center;
-  border-bottom-left-radius: 8px;
-  z-index:10;
-}
-
-.logo div:last-of-type:before {
-  content: '';
-  height: 100%;
-  width: 3rem;
-  border-bottom-right-radius: 8px;
-  position: absolute;
-  background-color: #ff3366;
-  right: 2rem;
-  z-index: 5;
-  
 }
 
 /* nav-logo */
 nav .logo {
-  /* font-size: 4rem; */
+  font-size: 3vw;
   text-transform: uppercase;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  grid-auto-flow: column;
+  display: block;
 }
 
 nav .logo a {
@@ -121,71 +73,83 @@ nav .logo-right {
   display: inline-flex;
   align-items: center;
   background-color: #ff3366;
-  padding: 2rem;
+  padding: 2vw;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
-nav .logo-right a {padding-right: 3rem; color: #ffffff;}
+nav .logo-right a {padding-right: 2vw; color: #ffffff;}
 
 /* nav-links */
 nav .links {
-  padding-top: 3rem;
-  font-size: 2rem;
+  padding-top: 3vw;
+  font-size: 2vw;
   list-style: none;
 }
 
 nav .links li {
   display: inline;
-  padding: 1rem;
+  padding: 1vw;
 }
-.claim {
+
+nav .links li a {color: #ff3366;}
+
+/* CONTENT */
+.content {
   width: 100%;
-  margin: 2rem;
-
+  height: 100%;
+  position: relative;
 }
 
-.subContent {
+/* CONTENT-START */
+.content .start {
+  margin: 3rem;
+}
+/* claim-start */
+.content .start .claim {
+  width: 100%;
+}
+.content .start .claim .title {
+  color: #ff3366;
+  font-size: 3vw;
+}
+
+/* subcontent-start */
+.content .start .sub-content {
+  padding-top: 3vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
-
+  gap: 2rem;
+}
+.content .start .sub-content .paragraph {
+  font-size: 1.5vw;
+  line-height: 3rem;
+  text-align: left;
 }
 
-.kontakt {
-  width: 100%;
+.content .start .kontakt {
+  
+  width: 80%;
   height: 100%;
   display: grid;
   justify-content: center;
   align-items: center;
 }
 
-/* Content */
-.content {
-  /* padding-left: 5rem; */
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-/* content-start */
-.content .start {
-  
-}
-.content .start .title {
-  color: #ff3366;
-  font-size: 2.5vw;
-}
-
-.content .start .paragraph {
-  padding-top: 3rem;
-  line-height: 3rem;
-  font-size: 1.5vw;
-  width: 50%;
-}
-
-.content .start .button {
+.content .start .kontakt .button {
+  color: #fff;
   background: linear-gradient(140deg, #ff8484 5%, #ff3366 100%);
   box-shadow: rgba(255, 51, 102, 0.4) 10px 30px 60px 0px;
+  border-radius: 2rem;
+  font-size: 1.6vw;
+  padding: 2vw;
+}
+
+.ipm {
+  position: absolute;
+  bottom: 5vw;
+  right: 10vw;
+  color: #fff;
+  font-size: 1vw;
 }
 
 
