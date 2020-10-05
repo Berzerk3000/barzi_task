@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url('/src/bg.jpg');
+  background: url('/src/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh; 
@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-  height: 70vh;
+  height: 90vh;
   width: 80vw;
   margin: auto;
   display: grid;
@@ -151,5 +151,94 @@ nav .links li a {color: #ff3366;}
   color: #fff;
   font-size: 1vw;
 }
+
+/* CONTENT-KONTAKT */
+.content .kontakt {
+  
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
+}
+
+.content .kontakt .text {
+  white-space: pre-line;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 2vw;
+  margin: auto;
+  color: #ff3366;
+  font-size: 1.3vw;
+  font-weight: lighter;
+}
+
+.content .kontakt .text .address {
+  font-size: 1.2vw;
+}
+
+/* kontakt-box*/
+.content .kontakt .kontakt-box {
+  margin-top: 2vw;
+  background-color: #333;
+  color: #fff; /* */
+
+  width: 60%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 12fr;
+  align-items: center;
+  padding: 0 1vw;
+  border-radius: 1rem;
+}
+
+.content .kontakt .kontakt-box .bar {
+  background: linear-gradient(to bottom,#ff3366, #ff8484);
+
+  display: inline-block;
+  height: 100%;
+  width: 1vw;
+
+}
+
+.content .kontakt .kontakt-box .form .section h1 {font-size: 1vw;}
+.content .kontakt .kontakt-box .form .section .text-box {
+  display: flex;
+  padding-bottom: 1vw;
+  position: relative;
+
+}
+
+.content .kontakt .kontakt-box .form .section .text-box .tape {
+  position: relative;
+  background-color: #ff3366;
+  border-radius: 5rem;
+  width: 10vw;
+  height: 20px;
+}
+
+.content .kontakt .kontakt-box .form .section .text-box input {
+  position: absolute;
+  left: 7vw;
+  bottom: 1vw;
+
+  border: none;
+  border-radius: 5rem;
+
+  width: 15vw;
+  height: 1vw;
+  font-size: 1vw;
+  padding: 6px 12px;
+  outline: none;
+}
+
+
+.content .kontakt .kontakt-box .form .section textarea {
+  width: 22.3vw; 
+  font-size: 1vw;
+  border-radius: 1rem;
+  padding: 8px;
+  outline: none;
+  background: linear-gradient(45deg, #ff8484 -150%, #fff 50%);
+}
+
 
 
