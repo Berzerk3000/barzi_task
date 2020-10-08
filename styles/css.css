@@ -53,7 +53,8 @@ body {
 
 /* NAV-BAR */
 nav {
-  margin-left: 3rem;
+  margin: 0 auto;
+  width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -102,7 +103,8 @@ nav .links li a {color: #ff3366;}
 
 /* CONTENT-START */
 .content .start {
-  margin: 3rem;
+  width: 90%;
+  margin: 5vw auto;
 }
 /* claim-start */
 .content .start .claim {
@@ -122,11 +124,11 @@ nav .links li a {color: #ff3366;}
 }
 .content .start .sub-content .paragraph {
   font-size: 1.5vw;
-  line-height: 3rem;
+  line-height: 3vw;
   text-align: left;
 }
 
-.content .start .kontakt {
+.content .start .kontakt-btn {
   
   width: 80%;
   height: 100%;
@@ -135,7 +137,7 @@ nav .links li a {color: #ff3366;}
   align-items: center;
 }
 
-.content .start .kontakt .button {
+.content .start .kontakt-btn .button {
   color: #fff;
   background: linear-gradient(140deg, #ff8484 5%, #ff3366 100%);
   box-shadow: rgba(255, 51, 102, 0.4) 10px 30px 60px 0px;
@@ -154,8 +156,7 @@ nav .links li a {color: #ff3366;}
 
 /* CONTENT-KONTAKT */
 .content .kontakt {
-  
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 2fr;
   justify-items: center;
 }
@@ -238,6 +239,52 @@ nav .links li a {color: #ff3366;}
   padding: 8px;
   outline: none;
   background: linear-gradient(45deg, #ff8484 -150%, #fff 50%);
+}
+
+/* CONTENT-WORK */
+.content .work {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: 5vw auto;
+  position: relative;
+}
+
+.content .work .icons {
+  display: grid;
+  grid-template-columns: 10vw 10vw 10vw;
+  grid-template-rows: 10vw 10vw;
+
+}
+
+.content .work .icons img {
+  width: 12vw;
+}
+
+.content .work .title {
+  color: #ff3366;
+  font-size: 3vw;
+}
+
+.content .work .paragraph {
+  padding-top: 3vw;
+  line-height: 3vw;
+  font-size: 1.5vw;
+}
+
+.content .work .kontakt-btn {
+  position: absolute;
+  bottom: -10vw;
+  right: 10vw;
+}
+
+.content .work .kontakt-btn .button {
+  color: #fff;
+  background: linear-gradient(140deg, #ff8484 5%, #ff3366 100%);
+  box-shadow: rgba(255, 51, 102, 0.4) 10px 30px 60px 0px;
+  border-radius: 2rem;
+  font-size: 1.6vw;
+  padding: 2vw;
 }
 
 
