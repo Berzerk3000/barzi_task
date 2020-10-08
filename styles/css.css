@@ -274,8 +274,8 @@ nav .links li a {color: #ff3366;}
 
 .content .work .kontakt-btn {
   position: absolute;
-  bottom: -10vw;
-  right: 10vw;
+  bottom: 0;
+  right: 8vw;
 }
 
 .content .work .kontakt-btn .button {
