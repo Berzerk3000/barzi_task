@@ -2,56 +2,73 @@ let kontakt = document.querySelector('section.kontakt');
 let start = document.querySelector('section.start');
 let work = document.querySelector('section.work');
 
-let kontakt_link = document.querySelector('a.kontakt-link');
-let start_link = document.querySelector('a.start-link');
-let work_link = document.querySelector('a.work-link');
+let links = document.querySelectorAll('.links li a');
+
+
+let switcher_section = document.querySelectorAll('.content-switcher .section');
 
 
 
 function startFunc()
 {
-      start_link.addEventListener('click', () => {
+      var theFunction = function() {
+        links[0].classList.add('current-link');
+        links[1].classList.remove('current-link');
+        links[2].classList.remove('current-link');
 
-      start_link.classList.add('current-link');
-      kontakt_link.classList.remove('current-link');
-      work_link.classList.remove('current-link');
+        switcher_section[0].classList.add('current-section');
+        switcher_section[1].classList.remove('current-section');
+        switcher_section[2].classList.remove('current-section');
 
-
-      console.log('start');
-      work.style.display = "none";
-      kontakt.style.display = "none"; // TEST
-      start.style.display = "block";
-    });
+        console.log('start');
+        work.style.display = "none";
+        kontakt.style.display = "none";
+        start.style.display = "block";
+      }
+      links[0].addEventListener('click', theFunction);
+      switcher_section[0].addEventListener('click', theFunction);
 }
 
 function kontaktFunc()
 {
-      kontakt_link.addEventListener('click', () => {
+      var theFunction = function() {
+        links[1].classList.add('current-link');
+        links[0].classList.remove('current-link');
+        links[2].classList.remove('current-link');
+  
+        switcher_section[1].classList.add('current-section');
+        switcher_section[0].classList.remove('current-section');
+        switcher_section[2].classList.remove('current-section');
+  
+        start.style.display = "none";
+        work.style.display = "none";
+        kontakt.style.display = "grid";
+      }
+      links[1].addEventListener('click', theFunction);
+      switcher_section[1].addEventListener('click', theFunction);
 
-      kontakt_link.classList.add('current-link');
-      start_link.classList.remove('current-link');
-      work_link.classList.remove('current-link');
-
-      start.style.display = "none";
-      work.style.display = "none";
-      kontakt.style.display = "grid";
-      console.log('kontakt');
-    });
 }
 
 function workFunc()
 {
+      var theFunction = function() {
+        links[2].classList.add('current-link');
+        links[0].classList.remove('current-link');
+        links[1].classList.remove('current-link');
 
-      work_link.addEventListener('click', () => {
+        switcher_section[2].classList.add('current-section');
+        switcher_section[0].classList.remove('current-section');
+        switcher_section[1].classList.remove('current-section');
 
-      work_link.classList.add('current-link');
-      kontakt_link.classList.remove('current-link');
-      start_link.classList.remove('current-link');
 
-      start.style.display = "none";
-      kontakt.style.display = "none";
-      work.style.display = "grid";
-    });
+
+
+        start.style.display = "none";
+        kontakt.style.display = "none";
+        work.style.display = "grid";
+      }
+      links[2].addEventListener('click', theFunction);
+      switcher_section[2].addEventListener('click', theFunction);
 }
 
 startFunc();

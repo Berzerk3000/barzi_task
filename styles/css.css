@@ -146,14 +146,6 @@ nav .links li a {color: #ff3366;}
   padding: 2vw;
 }
 
-.ipm {
-  position: absolute;
-  bottom: 5vw;
-  right: 10vw;
-  color: #fff;
-  font-size: 1vw;
-}
-
 /* CONTENT-KONTAKT */
 .content .kontakt {
   display: none;
@@ -286,6 +278,52 @@ nav .links li a {color: #ff3366;}
   font-size: 1.6vw;
   padding: 2vw;
 }
+
+/* impressum */
+.ipm {
+  position: absolute;
+  bottom: 1rem;
+  right: 10vw;
+  color: #fff;
+  font-size: 1vw;
+}
+
+
+/* CONTENT SWITCHER */
+.content-switcher {
+  /* background-color: black; */
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 42%;
+  
+  
+}
+
+.content-switcher .section {
+  background-color: #c8c8c8;
+  border: 0.1vw solid #848484;
+  padding: 1vw;
+  margin: 1rem 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.content-switcher .current-section {
+  background: linear-gradient(to bottom, #ff3366, #ff8484);
+}
+
+/* current-link triangle */
+.current-link::before {
+  position: absolute;
+  top: 2.8vw;
+  content: '';
+  border-top: 3vw #ff3366 solid;
+  border-left: 3vw transparent solid;
+  border-right: 3vw transparent solid;
+}
+
+
 
 
 
