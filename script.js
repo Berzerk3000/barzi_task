@@ -1,61 +1,20 @@
-// let kontakt = document.querySelector('section.kontakt');
-// let start = document.querySelector('section.start');
-// let work = document.querySelector('section.work');
-
-// let kontakt_link = document.querySelector('a.kontakt-link');
-// let start_link = document.querySelector('a.start-link');
-// let work_link = document.querySelector('a.work-link');
+let content_sections = document.querySelectorAll('.content .section');
+let switcher_sections = document.querySelectorAll('.content-switcher .section');
+let clickableSections = document.querySelectorAll('.content-switcher .section, .links li a');
 
 
-
-
-
-// function kontaktFunc()
-// {
-//       kontakt_link.addEventListener('click', () => {
-
-//       kontakt_link.classList.add('current-link');
-//       start_link.classList.remove('current-link');
-//       work_link.classList.remove('current-link');
-
-//       start.style.display = "none";
-//       work.style.display = "none";
-//       kontakt.style.display = "grid";
-//       console.log('kontakt');
-//     });
-// }
-
-// function startFunc()
-// {
-//       start_link.addEventListener('click', () => {
-
-//       start_link.classList.add('current-link');
-//       kontakt_link.classList.remove('current-link');
-//       work_link.classList.remove('current-link');
-
-
-//       console.log('start');
-//       work.style.display = "none";
-//       kontakt.style.display = "none"; // TEST
-//       start.style.display = "block";
-//     });
-// }
-
-// function workFunc()
-// {
-
-//       work_link.addEventListener('click', () => {
-
-//       work_link.classList.add('current-link');
-//       kontakt_link.classList.remove('current-link');
-//       start_link.classList.remove('current-link');
-
-//       start.style.display = "none";
-//       kontakt.style.display = "none";
-//       work.style.display = "grid";
-//     });
-// }
-
-// startFunc();
-// kontaktFunc();
-// workFunc();
+clickableSections.forEach(clickable => {
+  clickable.addEventListener('click', function() {
+    clickableSections.forEach(allsec => allsec.classList.remove('active'));
+    content_sections.forEach(sec => sec.classList.remove('display'));
+    var ID_of_clicked_Section = this.id;
+    for(x = 0; x < clickableSections.length; x++)
+    {
+      if(clickableSections[x].id == ID_of_clicked_Section)
+      {
+        clickableSections[x].classList.add('active');
+        content_sections[x].classList.add('display');
+      }
+    }
+  })
+});

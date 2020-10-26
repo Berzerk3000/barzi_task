@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/css.css">
-  <title>Barzi Soft</title>
-
+  <title>Barzi</title>
+  
 </head>
 
 <body>
@@ -21,85 +20,84 @@
 
       <nav>
         <div class="logo">
-          <div>your</div>
-          <div>logo</div>
-          <img src="/src/logo_white.png" alt="logo" class="lightLogo" />
-
-
-
-
-          <!-- <a href="">Your </a> 
+          <a href="">Your </a> 
           
           <div class="logo-right">
             <a href="">Logo </a>
             <img src="/src/logo_white.png">
-          </div> -->
+          </div>
         </div>
-
+        
         <ul class="links">
-          <li><a href="#" class="start-link current-link">Start</a></li>
-          <li><a href="#" class="kontakt-link">Kontakt</a></li>
-          <li><a href="#" class="work-link">Work</a></li>
+          <li><a href="#" class="active" id="start">Start</a></li>
+          <li><a href="#" class="" id="kontakt">Kontakt</a></li>
+          <li><a href="#" class="" id="work">Work</a></li>
         </ul>
       </nav>
 
       <div class="content">
-        <div class="claim">
-          <h1 class="title">Probleme erkenne, besprechen und lösen.</h1>
-        </div>
+        
+    
+        <section class="section start">
+            <div class="claim">
+              <h1 class="title">Probleme erkenne, besprechen und lösen.</h1>
+            </div>
+            <div class="sub-content">
+              <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ea harum eaque tenetur eum ullam numquam, enim voluptatum odit, esse perferendis facilis voluptatem saepe accusantium.</p>
+            
+              <div class="kontakt-btn"><a class="button" href="">zum Kontaktformular</a></div>
+            </div>
+              
+        </section>
 
-        <div class="subContent">
-          <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, hic quibusdam maxime ipsam fugit deserunt totam exercitationem consequuntur? Placeat enim voluptate nesciunt labore laboriosam. Autem.</p>
-          <div class="kontakt"><a class="button" href="">zum Kontaktformular</a></div>
-        </div>
+        <section class="section kontakt">
 
-
-        <!-- <section class="start">
-          <h1 class="title">Probleme erkenne, besprechen und lösen.</h1>
-          <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, hic quibusdam maxime ipsam fugit deserunt totam exercitationem consequuntur? Placeat enim voluptate nesciunt labore laboriosam. Autem.</p>
-
-          <a class="button" href="">zum Kontaktformular</a>
-        </section> -->
-
-        <!-- <section class="kontakt">
-
-          <h1 class="text">Max Muster
-            <span class="address">Musterstraße 1
-              12345 - Musterstadt
-            </span>
-          </h1>
+          <div class="text">
+            <h1>Max Muster
+              <span class="address">Musterstraße 1
+                12345 - Musterstadt
+              </span>
+            </h1>
+          </div>
 
           <div class="kontakt-box">
-            <div class="triangle-piece"></div>
             <div class="bar"></div>
 
             <div class="form">
               
-              <div class="section">
+              <div class="sec">
                 <h1>VORNAME: </h1>
-                <div class="tape"></div> 
-                <input class="textbox" type="text">
+                <div class="text-box">
+                  <div class="tape"></div> 
+                  <input class="textbox" type="text">
+                </div>
               </div>
 
-              <div class="section">
+              <div class="sec">
                 <h1>NACHNAME: </h1>
-                <div class="tape"></div> 
-                <input class="textbox" type="text">
+                <div class="text-box">
+                  <div class="tape"></div> 
+                  <input class="textbox" type="text">
+                </div>
               </div>
 
-              <div class="section">
+              <div class="sec">
                 <h1>E-MAIL: </h1>
-                <div class="tape"></div> 
-                <input class="textbox" type="text">
+                <div class="text-box">
+                  <div class="tape"></div> 
+                  <input class="textbox" type="email">
+                </div>
               </div>
 
-              <div class="section">
+              <div class="sec">
                 <h1>TELEFON: </h1>
-                <div class="tape"></div> 
-                <input class="textbox" type="text">
+                <div class="text-box">
+                  <div class="tape"></div> 
+                  <input class="textbox" type="text">
+                </div>
               </div>
 
-              <div class="section">
+              <div class="sec">
                 <textarea name="" id="" cols="44" rows="10" placeholder="Ihre Nachricht hier..."></textarea>
               </div>
 
@@ -108,9 +106,9 @@
             
           </div>
 
-        </section> -->
+        </section>
 
-        <!-- <section class="work">
+        <section class="section work">
           <div>
             <h1 class="title">Lorem Ipsum Dolor</h1>
             <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, eligendi eveniet possimus voluptates incidunt eos voluptas aut id facilis, iure quis labore distinctio fugiat quisquam omnis recusandae dolorem unde nostrum quam ut fuga accusantium commodi!</p>
@@ -124,15 +122,19 @@
             <img src="/src/icon_css.png" alt="">
 
           </div>
+          <div class="kontakt-btn"><a class="button" href="">zum Kontaktformular</a></div>
+        </section>
 
-          <a class="button" href="">zum Kontaktformular</a>
-        </section> -->
+        <div class="content-switcher">
+          <div class="section active" id="start"></div>
+          <div class="section" id="kontakt"></div>
+          <div class="section Work" id="work"></div>
+        </div>
 
-      </div>
-
+      </div> 
     </div>
-    <!--Outsite of the container-->
-
+  </div>
+    <!--Outside of the container-->
     <a href="" class="ipm">impressum</a>
 
   </div>
@@ -140,5 +142,4 @@
   <script src="script.js"></script>
 
 </body>
-
 </html>
