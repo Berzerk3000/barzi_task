@@ -303,7 +303,7 @@ a.active::before {
   padding: 2vw;
 }
 
-.content .display {
+.content .active {
   left: 5vw;
 }
 
