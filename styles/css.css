@@ -96,8 +96,8 @@ nav .links li {
 
 nav .links li a {color: #ff3366;}
 
-/* current-link triangle */
-.current-link::before {
+/* active triangle */
+a.active::before {
   position: absolute;
   top: 0;
   content: '';
@@ -121,10 +121,6 @@ nav .links li a {color: #ff3366;}
   position: absolute;
   left: 80vw;
   transition: 1s;
-}
-
-.content .display {
-  left: 5vw;
 }
 
 /* claim-start */
@@ -169,9 +165,14 @@ nav .links li a {color: #ff3366;}
 
 /* CONTENT-KONTAKT */
 .content .kontakt {
-  display: none;
+  display: grid;
   grid-template-columns: 1fr 2fr;
   justify-items: center;
+  position: absolute;
+  left: 80vw;
+  top: 0;
+  right: 0;
+  transition: 1s;
 }
 
 .content .kontakt .text {
@@ -213,15 +214,15 @@ nav .links li a {color: #ff3366;}
 
 }
 
-.content .kontakt .kontakt-box .form .section h1 {font-size: 1vw;}
-.content .kontakt .kontakt-box .form .section .text-box {
+.content .kontakt .kontakt-box .form .sec h1 {font-size: 1vw;}
+.content .kontakt .kontakt-box .form .sec .text-box {
   display: flex;
   padding-bottom: 1vw;
   position: relative;
 
 }
 
-.content .kontakt .kontakt-box .form .section .text-box .tape {
+.content .kontakt .kontakt-box .form .sec .text-box .tape {
   position: relative;
   background-color: #ff3366;
   border-radius: 5rem;
@@ -229,7 +230,7 @@ nav .links li a {color: #ff3366;}
   height: 20px;
 }
 
-.content .kontakt .kontakt-box .form .section .text-box input {
+.content .kontakt .kontakt-box .form .sec .text-box input {
   position: absolute;
   left: 7vw;
   bottom: 1vw;
@@ -245,7 +246,7 @@ nav .links li a {color: #ff3366;}
 }
 
 
-.content .kontakt .kontakt-box .form .section textarea {
+.content .kontakt .kontakt-box .form .sec textarea {
   width: 22.3vw; 
   font-size: 1vw;
   border-radius: 1rem;
@@ -256,11 +257,13 @@ nav .links li a {color: #ff3366;}
 
 /* CONTENT-WORK */
 .content .work {
-  display: none;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   width: 90%;
   margin: 5vw auto;
-  position: relative;
+  position: absolute;
+  left: 80vw;
+  transition: 1s;
 }
 
 .content .work .icons {
@@ -300,6 +303,10 @@ nav .links li a {color: #ff3366;}
   padding: 2vw;
 }
 
+.content .display {
+  left: 5vw;
+}
+
 /* impressum */
 .ipm {
   position: absolute;
@@ -330,7 +337,7 @@ nav .links li a {color: #ff3366;}
   cursor: pointer;
 }
 
-.content-switcher .current-section {
+.content-switcher .active {
   background: linear-gradient(to bottom, #ff3366, #ff8484);
 }
 
