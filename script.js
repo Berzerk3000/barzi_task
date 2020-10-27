@@ -1,20 +1,17 @@
-let content_sections = document.querySelectorAll('.content .section');
-let switcher_sections = document.querySelectorAll('.content-switcher .section');
-let clickableSections = document.querySelectorAll('.content-switcher .section, .links li a');
+const content_sections = Array.from(document.querySelectorAll('.content section'));
+const clickable_sections = Array.from(document.querySelectorAll('.content-switcher .section, .links li a'));
+const allElements = content_sections.concat(clickable_sections);
 
-
-clickableSections.forEach(clickable => {
+clickable_sections.forEach(clickable => {
   clickable.addEventListener('click', function() {
-    clickableSections.forEach(allsec => allsec.classList.remove('active'));
-    content_sections.forEach(sec => sec.classList.remove('active'));
-    var ID_of_clicked_Section = this.id;
-    for(x = 0; x < clickableSections.length; x++)
-    {
-      if(clickableSections[x].id == ID_of_clicked_Section)
+
+    var index_of_clicked_section = this.dataset.index;
+    allElements.forEach(allElem => {
+      allElem.classList.remove('active');
+      if(allElem.dataset.index == index_of_clicked_section)
       {
-        clickableSections[x].classList.add('active');
-        content_sections[x].classList.add('active');
+        allElem.classList.add('active');
       }
-    }
+    });
   })
 });
