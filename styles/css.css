@@ -14,6 +14,57 @@ body {
   height: 100vh; 
 }
 
+.kontakt-btn {
+  color: #fff;
+  background: linear-gradient(140deg, #ff8484 5%, #ff3366 100%);
+  box-shadow: rgba(255, 51, 102, 0.4) 10px 30px 60px 0px;
+  border-radius: 2rem;
+  font-size: 1.6vw;
+  padding: 2vw;
+  cursor: default;
+}
+
+.close-btn{
+  font-size: 2rem;
+  border: none;
+  color: #ff3366;
+  background-color: transparent;
+  border-radius: 100%;
+  position: absolute;
+  display: none;
+  right: 10vw;
+  top: 5vw;
+  z-index: 1;
+}
+
+.close-btn:hover {
+  color: #ff8484;
+}
+
+.close-btn.active {
+  display: block;
+}
+
+.overlay.active {
+  filter: blur(5px);
+}
+
+.imp-text {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 10vw;
+  text-align: center;
+  margin: 0 20vw;
+  background-color: #fff;
+  padding: 2vw 4vw;
+  opacity: 0.8;
+  border-radius: 1rem;
+}
+
+.imp-text.active {
+  display: block;
+}
 
 .wrapper {
   width: 100vw;
@@ -146,21 +197,12 @@ a.active::before {
 }
 
 .content .start .kontakt-btn {
-  
   width: 80%;
-  height: 100%;
+  height: 30%;
+  margin: auto;
   display: grid;
   justify-content: center;
   align-items: center;
-}
-
-.content .start .kontakt-btn .button {
-  color: #fff;
-  background: linear-gradient(140deg, #ff8484 5%, #ff3366 100%);
-  box-shadow: rgba(255, 51, 102, 0.4) 10px 30px 60px 0px;
-  border-radius: 2rem;
-  font-size: 1.6vw;
-  padding: 2vw;
 }
 
 /* CONTENT-KONTAKT */
@@ -294,15 +336,6 @@ a.active::before {
   right: 8vw;
 }
 
-.content .work .kontakt-btn .button {
-  color: #fff;
-  background: linear-gradient(140deg, #ff8484 5%, #ff3366 100%);
-  box-shadow: rgba(255, 51, 102, 0.4) 10px 30px 60px 0px;
-  border-radius: 2rem;
-  font-size: 1.6vw;
-  padding: 2vw;
-}
-
 .content section.active {
   left: 5vw;
 }
@@ -314,6 +347,7 @@ a.active::before {
   right: 10vw;
   color: #fff;
   font-size: 1vw;
+  cursor: pointer;
 }
 
 
