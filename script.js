@@ -4,18 +4,18 @@ const allElements = contentSections.concat(clickableSections);
 
 clickableSections.forEach(clickable => {
   clickable.addEventListener('click', function() {
-    allElements.forEach(allElem => {
-      allElem.classList.remove('active'); 
-      if(allElem.dataset.index == this.dataset.index) allElem.classList.add('active');
+    allElements.forEach(elem => {
+      elem.classList.remove('active'); 
+      if(elem.dataset.index == this.dataset.index) elem.classList.add('active');
     });
   })
 });
 
 
+const overlay = document.querySelectorAll('.blur, .close-btn, .imp-text, .ipm');
+const ipmBtn = document.querySelector('.ipm');
+const closeBtn = document.querySelector('.close-btn');
 
-const overlay = document.querySelectorAll('.overlay, .close-btn, .imp-text, .ipm');
-const closeBtn = overlay[0]; 
-const ipmBtn = overlay[3];
 
 ipmBtn.addEventListener('click', function() {
   overlay.forEach(overlayEqupments => {
