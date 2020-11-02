@@ -9,7 +9,17 @@
 </head>
 
 <body>
-  <div class="overlay-box">
+  <div class="kontakt-formular" data-index="kontakt-formular">
+    <button class="close-btn">X</button>
+    <input type="text" class="name" placeholder="Name">
+    <input type="email" class="email" placeholder="E-Mail">
+    <input type="text" class="ort" placeholder="Ort">
+    <input type="text" class="tel" placeholder="Telefon">
+    <input type="text" class="betreff" placeholder="Betreff">
+    <textarea name="" class="nachrischt" id="" cols="30" rows="10" placeholder="Nachrischt"></textarea>
+    <input type="button" value="submit">
+  </div>
+  <div class="overlay-box" data-index="ipm">
       <div class="overlay-header">
         <button class="close-btn">X</button>
       </div> 
@@ -53,7 +63,7 @@
             <div class="sub-content">
               <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ea harum eaque tenetur eum ullam numquam, enim voluptatum odit, esse perferendis facilis voluptatem saepe accusantium.</p>
             
-              <div class="kontakt-btn">zum Kontaktformular</div>
+              <div class="kontakt-btn" data-index="kontakt-formular">zum Kontaktformular</div>
             </div>
               
         </section>
@@ -130,7 +140,7 @@
             <img src="/src/icon_css.png" alt="">
 
           </div>
-          <div class="kontakt-btn">zum Kontaktformular</div>
+          <div class="kontakt-btn" data-index="kontakt-formular">zum Kontaktformular</div>
         </section>
 
         <div class="content-switcher">
@@ -143,7 +153,7 @@
     </div>
   </div>
     <!--Outside of the wrapper-->
-    <div class="ipm">impressum</div>
+    <div class="ipm" data-index="ipm">impressum</div>
 
   <script src="script.js"></script>
 

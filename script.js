@@ -11,21 +11,20 @@ clickableSections.forEach(clickable => {
   })
 });
 
-const overlayEqupments = document.querySelectorAll('.blur, .overlay-box, .close-btn, .imp-text, .ipm');
-const ipmBtn = document.querySelector('.ipm');
-const closeBtn = document.querySelector('.close-btn');
+const overlayElements = document.querySelectorAll('.blur, .overlay-box, .kontakt-formular');
+const buttons = document.querySelectorAll('.ipm, .close-btn, .kontakt-btn');
 
-
-ipmBtn.addEventListener('click', function() {
-  overlayEqupments.forEach(oeq => {
-    oeq.classList.add('active');
-  })
+buttons.forEach(btn => {
+  btn.addEventListener('click', function () {
+    overlayElements.forEach(overlayElem => {
+      if(overlayElem.dataset.index == btn.dataset.index)
+      {
+        overlayElem.classList.add('active');
+      }
+    })
+  });
 })
 
-closeBtn.addEventListener('click', function () {
-  overlayEqupments.forEach(oeq => {
-    oeq.classList.remove('active');
-  })
-})
+
 
 
