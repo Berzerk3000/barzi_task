@@ -11,16 +11,15 @@ clickableSections.forEach(clickable => {
   })
 });
 
-const overlayElements = document.querySelectorAll('.blur, .overlay-box, .kontakt-formular');
+const overlayElements = document.querySelectorAll('.blur, .overlay-box');
 const buttons = document.querySelectorAll('.ipm, .close-btn, .kontakt-btn');
 
 buttons.forEach(btn => {
   btn.addEventListener('click', function () {
     overlayElements.forEach(overlayElem => {
-      if(overlayElem.dataset.index == btn.dataset.index)
-      {
-        overlayElem.classList.add('active');
-      }
+      overlayElem.classList.add('active');
+      if(btn.className == "close-btn")
+     {overlayElem.classList.remove('active');}
     })
   });
 })
