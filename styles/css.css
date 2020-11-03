@@ -28,27 +28,12 @@ body {
 
 /* Overlay */
 .kontakt-formular {
-  position: absolute;
-  top: 50%;
-  left: 150%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
-  background-color: #848484;
   border-radius: 1rem;
   padding: 2rem 3rem;
   transition: 1s;
-}
-
-.kontakt-formular.active {
-  left: 50%;
-}
-
-.kontakt-formular .close-btn {
-  position: absolute;
-  right: 10px;
 }
 
 .kontakt-formular .betreff, .nachrischt {
@@ -108,6 +93,7 @@ body {
 
 .blur.active {
   filter: blur(5px);
+  pointer-events: none;
 }
 
 

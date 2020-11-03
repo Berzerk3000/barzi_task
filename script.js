@@ -14,15 +14,32 @@ clickableSections.forEach(clickable => {
 const overlayElements = document.querySelectorAll('.blur, .overlay-box');
 const buttons = document.querySelectorAll('.ipm, .close-btn, .kontakt-btn');
 
+var xhr= new XMLHttpRequest();
+
+
 buttons.forEach(btn => {
   btn.addEventListener('click', function () {
     overlayElements.forEach(overlayElem => {
       overlayElem.classList.add('active');
-      if(btn.className == "close-btn")
-     {overlayElem.classList.remove('active');}
+
+      if(btn.dataset.index == "ipm" || btn.dataset.index == "kontakt-form") {
+        var fileName = btn.dataset.index + ".html";
+        xhr.open('GET', fileName, true);
+        xhr.onreadystatechange= function() {
+          if (this.readyState!==4) return;
+          if (this.status!==200) return; // or whatever error handling you want
+          document.getElementById('content').innerHTML= this.responseText;
+        };
+          xhr.send();
+      }
+      if(btn.className == "close-btn") {
+        overlayElem.classList.remove('active');
+      }
     })
   });
-})
+});
+
+
 
 
 
