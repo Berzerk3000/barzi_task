@@ -13,6 +13,7 @@ clickableSections.forEach(clickable => {
 
 const overlayElements = document.querySelectorAll('.blur, .overlay-box');
 const buttons = document.querySelectorAll('.ipm, .close-btn, .kontakt-btn');
+const titleForm = document.querySelector('.title-form')
 
 var xhr= new XMLHttpRequest();
 
@@ -21,9 +22,10 @@ buttons.forEach(btn => {
   btn.addEventListener('click', function () {
     overlayElements.forEach(overlayElem => {
       overlayElem.classList.add('active');
-
       if(btn.dataset.index == "ipm" || btn.dataset.index == "kontakt-form") {
-        var fileName = btn.dataset.index + ".html";
+        const fileName = btn.dataset.index + ".html";
+
+        titleForm.innerHTML = btn.dataset.name;
         xhr.open('GET', fileName, true);
         xhr.onreadystatechange= function() {
           if (this.readyState!==4) return;
