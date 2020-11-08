@@ -133,13 +133,13 @@ body {
 
 .container {
   height: 90vh;
-  width: 80vw;
+  width: 90vw;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 8fr;
   grid-template-rows: 1fr 5fr;
   background: linear-gradient(to right, #ff8484 -300%, #ffffff 80%);
-  box-shadow: rgba(255, 132, 132, 0.2) -60px 40px;  
+  box-shadow: rgba(255, 132, 132, 0.3) -40px 20px;  
 }
 
 /* LEFT BAR */
@@ -156,37 +156,21 @@ body {
 .container .left-bar .logo-dark a img {
   display: block;
   margin: auto;
+  width: 3vw;
 }
 
 /* NAV-BAR */
 nav {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 /* nav-logo */
-nav .logo {
-  font-size: 3vw;
-  text-transform: uppercase;
-  display: block;
+nav .logo img {
+  width: 32vw;
 }
-
-nav .logo a {
-  color: #ff3366;
-}
-
-nav .logo-right {
-  display: inline-flex;
-  align-items: center;
-  background-color: #ff3366;
-  padding: 2vw;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-}
-nav .logo-right a {padding-right: 2vw; color: #ffffff;}
-
 /* nav-links */
 nav .links {
   padding-top: 3vw;
@@ -325,7 +309,7 @@ a.active::before {
   background-color: #ff3366;
   border-radius: 5rem;
   width: 10vw;
-  height: 20px;
+  height: 1.5vw;
 }
 
 .content .kontakt .kontakt-box .form .sec .text-box input {
@@ -339,7 +323,8 @@ a.active::before {
   width: 15vw;
   height: 1vw;
   font-size: 1vw;
-  padding: 6px 12px;
+  /* padding: 6px 12px; */
+  padding: 0.5vw 1vw;
   outline: none;
 }
 
@@ -387,9 +372,9 @@ a.active::before {
 }
 
 .content .work .kontakt-btn {
-  position: absolute;
-  bottom: 0;
-  right: 8vw;
+  transform: translate(38vw, -3vw); 
+  width: 70%;
+  text-align: center;
 }
 
 .content section.active {
@@ -400,9 +385,9 @@ a.active::before {
 .ipm {
   position: absolute;
   bottom: 1rem;
-  right: 10vw;
+  right: 5vw;
   color: #fff;
-  font-size: 1vw;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -429,4 +414,31 @@ a.active::before {
 
 .content-switcher .active {
   background: linear-gradient(to bottom, #ff3366, #ff8484);
+}
+
+/* Media queries */
+@media screen and (max-width: 740px) 
+{
+  .container {
+    height: 50vh;
+  }
+  .content .start .sub-content, .content .work{
+    grid-template-columns: 1fr;
+  }
+
+  .content .kontakt {
+    grid-template-columns: 1fr;
+  }
+
+  .content .kontakt .kontakt-box {
+    border-radius: 5px;
+  }
+
+  .content .work .icons {
+    display: none;
+  }
+
+  .content .work .kontakt-btn {
+    transform: translate(0,10px);
+  }
 }
